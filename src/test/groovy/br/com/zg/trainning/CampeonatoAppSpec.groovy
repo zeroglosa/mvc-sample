@@ -1,6 +1,5 @@
 package br.com.zg.trainning
 
-//import br.com.zg.trainning.controller.CampeonatoController
 import spock.lang.Specification
 
 class CampeonatoAppSpec extends Specification {
@@ -12,11 +11,10 @@ class CampeonatoAppSpec extends Specification {
         System.in = input
 
         when:
-//        CampeonatoController controller = new CampeonatoController()
-//        controller.inicieCampeonato()
+        println 'Executar logica do controller inicial'
 
         then:
-        outputStream.toString().readLines().last() == "Corinthians"
+        outputStream.toString().readLines().last().contains "Corinthians"
 
         where:
         input = this.class.getResourceAsStream('/input1.txt')
