@@ -2,7 +2,7 @@ package br.com.zg.trainning
 
 import spock.lang.Specification
 
-class CampeonatoAppSpec extends Specification {
+class CampeonatoAppConsoleSpec extends Specification {
 
     void 'Aplicativo deve retornar o campeao do campeonato quando executar operação 1'() {
         setup:
