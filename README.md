@@ -12,30 +12,52 @@ _Porém é importante lembrar que o regulamento é algo mutável podendo variar 
 
 Exemplo de entrada:
 > Seja bem vindo
+>
 > Qual o nome do campeonato: _Campeonato Brasileiro 2015 Serie A_
+>
 > Insira a lista de times...
+>
 > Qual o nome do time? _Conrinthians_
+>
 > Qual o numero de vitorias? _24_
+>
 > Qual o numero de empates? _8_
+>
 > Qual o numero de derrotas? _5_
+>
 > Qual o numero de gols pro? _70_
+>
 > Qual o numero de gols contra? _30_
+>
 > Deseja inserir outro time (s/n) ? _s_
 >
+>
+>
 > Qual o nome do time? _Atletico MG_
+>
 > Qual o numero de vitorias? _20_
+>
 > Qual o numero de empates? _6_
+>
 > Qual o numero de derrotas? _11_
+>
 > Qual o numero de gols pro? _62_
+>
 > Qual o numero de gols contra? _47_
+>
 > Deseja inserir outro time (s/n) ? _n_
 
 Ao final da inserção dos dados o aplicativo deve exibir as opções. Que serão disponibilizadas para o usuário: Saber o nome do time campeão, o nome do lanterna, e exibir a tabela de pontuação ordenada.
 
 Exemplo:
 > Selecione uma operação
+>
 > [1] Saber o campeão
+>
 > [2] Saber o lanterna
+>
 > [3] Exibir tabela
+>
 > _1_
+>
 > O campeão é o Corinthians
