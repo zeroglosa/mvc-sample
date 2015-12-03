@@ -58,6 +58,8 @@ Exemplo:
 >
 > [3] Exibir tabela
 >
+> [0] Encerrar
+>
 > _1_
 >
 > O campeão é o Corinthians
