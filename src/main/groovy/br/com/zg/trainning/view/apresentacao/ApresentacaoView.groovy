@@ -12,9 +12,9 @@ class ApresentacaoView implements EntradaDadosApresentacao {
     @Override
     String exibeMenu() {
 
-        println """Selecione uma operação
+        println """Selecione uma operaï¿½ï¿½o
 
-[1] Saber o campeão
+[1] Saber o campeï¿½o
 
 [2] Saber o lanterna
 
@@ -22,14 +22,18 @@ class ApresentacaoView implements EntradaDadosApresentacao {
 
 [0] Encerrar
 
-Opção:
+Opï¿½ï¿½o:
 """
         return entrada.nextLine()
 
     }
     void exibeDadosTime(Clube clube){
         println "Nome:  ${clube.nome}"
-        println "Vitórias:  ${clube.vitorias}"
+        println "Vitï¿½rias:  ${clube.vitorias}"
         println "Saldo Gols:  ${clube.saldo}"
+    }
+    void aguardaConfirmacao(){
+        print("Pressione qualquer tecla para continuar...")
+        entrada.nextLine()
     }
 }

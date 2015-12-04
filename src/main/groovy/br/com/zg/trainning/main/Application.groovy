@@ -11,13 +11,6 @@ class Application {
 
 
 	public static void main(String[] args){
-//		ClubeController teste = new ClubeController()
-//		Campeonato brasileirao = new Campeonato()
-//		teste.adicionaClubes(brasileirao)
-//		teste.adicionaClubes(brasileirao)
-//		CalcularDadosCampeonato estatisticas = new CalcularDadosCampeonato()
-//		Clube campeao = estatisticas.retorneCampeao(brasileirao)
-//		println campeao?.nome
 
 		CampeonatoController campeonato = new CampeonatoController()
 		campeonato.iniciaCampeonato()

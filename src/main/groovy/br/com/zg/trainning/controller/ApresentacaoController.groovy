@@ -16,14 +16,17 @@ class ApresentacaoController {
         switch(opcao){
             case '1':
                 apreView.exibeDadosTime(calcDados.retorneCampeao(campeonato))
+                apreView.aguardaConfirmacao()
                 exibeMenu(campeonato)
             break;
             case '2':
                 apreView.exibeDadosTime(calcDados.retorneUltimoColocado(campeonato))
+                apreView.aguardaConfirmacao()
                 exibeMenu(campeonato)
             break;
             case '3':
                 calcDados.imprimeTabela(campeonato)
+                apreView.aguardaConfirmacao()
                 exibeMenu(campeonato)
 
             break;
@@ -31,7 +34,7 @@ class ApresentacaoController {
                 return
             break;
             default:
-                println "Opção inválida, digite novamente"
+                println "Opï¿½ï¿½o invï¿½lida, digite novamente"
                 exibeMenu()
             break;
         }
