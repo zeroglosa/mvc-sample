@@ -9,6 +9,7 @@ import br.com.zg.trainning.view.CampeonatoView
  * Created by Samuel Junio on 03/12/2015.
  */
 class CampeonatoController {
+
     Campeonato campeonato
     public void iniciar(){
         String nomeCampeonato = CampeonatoView.lerCampeonato()
@@ -26,7 +27,6 @@ class CampeonatoController {
             String acao = CampeonatoView.lerContinuar()
             if(acao.equals("n")) break
         }
-
         CampeonatoView.exibirOpcoes()
         while(true){
             String acao = CampeonatoView.lerAcao()
@@ -37,4 +37,5 @@ class CampeonatoController {
         }
 
     }
+
 }

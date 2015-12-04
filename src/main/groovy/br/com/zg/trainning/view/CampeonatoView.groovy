@@ -36,11 +36,11 @@ class CampeonatoView {
     }
 
     public static void mostrarCampeao(String timeCampeao){
-        println("O campeão é o $timeCampeao");
+        println(timeCampeao);
     }
 
     public static void mostrarLanterna(String timeLanterna){
-        println("O campeão é o $timeLanterna");
+        println(timeLanterna);
     }
 
     public static void mostrarTabela(String tabela){
