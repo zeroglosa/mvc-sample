@@ -15,7 +15,7 @@ class CampeonatoAppConsoleSpec extends Specification {
         println 'Executar logica do controller inicial'
 
         then:
-        outputStream.toString().readLines().last().contains "Corinthians"
+        outputStream.toString().contains 'O campeão é o Corinthians!'
 
         where:
         input = this.class.getResourceAsStream('/inputComCampeao.txt')
@@ -31,7 +31,7 @@ class CampeonatoAppConsoleSpec extends Specification {
         println 'Executar logica do controller inicial'
 
         then:
-        outputStream.toString().readLines().last().contains "Grêmio"
+        outputStream.toString().contains 'O lanterna é o Grêmio.'
 
         where:
         input = this.class.getResourceAsStream('/inputComEmpate.txt')
