@@ -20,7 +20,6 @@ class Application {
 //		println campeao?.nome
 
 		CampeonatoController campeonato = new CampeonatoController()
-
 		campeonato.iniciaCampeonato()
 	}
 

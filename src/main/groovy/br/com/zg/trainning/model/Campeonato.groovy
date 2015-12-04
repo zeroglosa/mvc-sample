@@ -6,11 +6,8 @@ class Campeonato {
 	List <Clube> clubesParticipantes = []
 
 	void adicionaClubes(Clube clube){
-		println clube.properties
 		clubesParticipantes+=clube
 	}
-
-
 
 
 }

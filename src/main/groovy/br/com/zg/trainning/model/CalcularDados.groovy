@@ -7,5 +7,4 @@ interface CalcularDados {
 
 		Clube retorneUltimoColocado(Campeonato campeonato)
 
-
 }
