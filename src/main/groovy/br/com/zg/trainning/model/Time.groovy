@@ -9,4 +9,7 @@ class Time {
     int golsPro
     int golsContra
 
+    int getSaldoDeGols() {
+        return golsPro - golsContra
+    }
 }

@@ -9,4 +9,8 @@ class Campeonato {
         times += time
         time
     }
+
+    List<Time> getTimes(){
+        return this.times
+    }
 }
