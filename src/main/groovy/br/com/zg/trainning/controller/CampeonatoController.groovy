@@ -5,7 +5,6 @@ import br.com.zg.trainning.model.Estatisticas
 import br.com.zg.trainning.model.Time
 import br.com.zg.trainning.view.CampeonatoView
 
-
 /**
  * Created by Samuel Junio on 03/12/2015.
  */
@@ -27,9 +26,6 @@ class CampeonatoController {
             String acao = CampeonatoView.lerContinuar()
             if(acao.equals("n")) break
         }
-
-
-
 
         CampeonatoView.exibirOpcoes()
         while(true){

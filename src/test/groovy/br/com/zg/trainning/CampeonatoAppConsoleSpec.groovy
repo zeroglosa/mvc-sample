@@ -1,5 +1,6 @@
 package br.com.zg.trainning
 
+import br.com.zg.trainning.controller.CampeonatoController
 import spock.lang.Specification
 
 class CampeonatoAppConsoleSpec extends Specification {
