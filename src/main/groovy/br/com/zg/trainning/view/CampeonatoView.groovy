@@ -4,8 +4,8 @@ package br.com.zg.trainning.view
  * Created by Samuel Junio on 03/12/2015.
  */
 class CampeonatoView {
-
-    public static def lerTime = { ->
+    static Scanner scanner = new Scanner(System.in)
+    public static def lerTime = {
         String nomeTime = lerLinha("Nome do Time")
         int vitorias = lerLinha("Vitórias").toInteger()
         int empates = lerLinha("Empates").toInteger()
@@ -49,6 +49,6 @@ class CampeonatoView {
 
     private static String lerLinha(String mensagem){
         print("$mensagem: ")
-        return System.in.newReader().readLine();
+        return scanner.nextLine()
     }
 }

@@ -14,28 +14,31 @@ class CampeonatoController {
     public void iniciar(){
         String nomeCampeonato = CampeonatoView.lerCampeonato()
         campeonato = new Campeonato(nomeCampeonato : nomeCampeonato)
-        while(true){
-            def (String nomeTime, int vitorias, int empates, int derrotas, int golsFeitos, int golsTomados) = CampeonatoView.lerTime()
-            campeonato.inserirTime(new Time(
-                    nomeTime : nomeTime,
-                    estatisticas: new Estatisticas(
-                            saldoVitorias : vitorias,
-                            saldoEmpates : empates,
-                            saldoDerrotas : derrotas,
-                            saldoGolsFeitos: golsFeitos,
-                            saldoGolsLevados: golsTomados)))
-            String acao = CampeonatoView.lerContinuar()
-            if(acao.equals("n")) break
-        }
+        adicionarTime()
         CampeonatoView.exibirOpcoes()
-        while(true){
-            String acao = CampeonatoView.lerAcao()
-            if(acao.equals("1")) CampeonatoView.mostrarCampeao(campeonato.obterCampeao().toString())
-            else if(acao.equals("2")) CampeonatoView.mostrarLanterna(campeonato.obterLanterna().toString())
-            else if(acao.equals("3")) CampeonatoView.mostrarTabela(campeonato.obterTabela().toString())
-            else if(acao.equals("0")) break
-        }
+        fluxoPrincipal()
+    }
 
+    private void fluxoPrincipal() {
+        String acao = CampeonatoView.lerAcao()
+        if (acao.equals("1")) CampeonatoView.mostrarCampeao(campeonato.obterCampeao().toString())
+        else if (acao.equals("2")) CampeonatoView.mostrarLanterna(campeonato.obterLanterna().toString())
+        else if (acao.equals("3")) CampeonatoView.mostrarTabela(campeonato.obterTabela().toString())
+        else if (!acao.equals("0")) fluxoPrincipal()
+    }
+
+    private void adicionarTime() {
+        def (String nomeTime, int vitorias, int empates, int derrotas, int golsFeitos, int golsTomados) = CampeonatoView.lerTime()
+        campeonato.inserirTime(new Time(
+                nomeTime: nomeTime,
+                estatisticas: new Estatisticas(
+                        saldoVitorias: vitorias,
+                        saldoEmpates: empates,
+                        saldoDerrotas: derrotas,
+                        saldoGolsFeitos: golsFeitos,
+                        saldoGolsLevados: golsTomados)))
+        String acao = CampeonatoView.lerContinuar()
+        if(acao.toUpperCase().equals("S")) adicionarTime()
     }
 
 }
