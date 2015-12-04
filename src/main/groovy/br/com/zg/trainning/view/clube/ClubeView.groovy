@@ -1,8 +1,12 @@
 package br.com.zg.trainning.view.clube
 
+import br.com.zg.trainning.view.campeonato.CampeonatoView
+
+import static br.com.zg.trainning.view.campeonato.CampeonatoView.entrada
+
+
 class ClubeView implements EntradaDadosClube{
 
-	Scanner entrada = new Scanner(System.in)
 
 	@Override
 	String solicitaNomeClube() {

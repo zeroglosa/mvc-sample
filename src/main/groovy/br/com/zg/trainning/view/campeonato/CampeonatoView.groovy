@@ -2,7 +2,7 @@ package br.com.zg.trainning.view.campeonato
 
 class CampeonatoView implements EntradaDadosCampeonato{
 
-	Scanner entrada = new Scanner(System.in)
+	static Scanner entrada = new Scanner(System.in)
 
 
 	@Override
