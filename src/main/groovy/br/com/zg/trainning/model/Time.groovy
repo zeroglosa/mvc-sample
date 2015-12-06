@@ -13,7 +13,7 @@ class Time implements Comparable<Time> {
 
     @Override
     String toString() {
-        return "$nomeTime - ${estatisticas.toString()}"
+        return "$nomeTime"
     }
 
     @Override

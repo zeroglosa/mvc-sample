@@ -3,9 +3,9 @@ package br.com.zg.trainning.view
 /**
  * Created by Samuel Junio on 03/12/2015.
  */
-class CampeonatoView {
-    static Scanner scanner = new Scanner(System.in)
-    public static def lerTime = {
+class CampeonatoView2015 implements ViewDeCampeonato {
+    Scanner scanner = new Scanner(System.in)
+    public def lerTime = {
         String nomeTime = lerLinha("Nome do Time")
         int vitorias = lerLinha("Vitórias").toInteger()
         int empates = lerLinha("Empates").toInteger()
@@ -16,38 +16,38 @@ class CampeonatoView {
     }
 
 
-    public static String lerCampeonato(){
+    public String lerCampeonato(){
         String nomeCampeonato = lerLinha("Seja bem vindo!!!\nNome do Campeonato")
         return nomeCampeonato
     }
 
 
-    public static String lerAcao(){
+    public String lerAcao(){
         String acao = lerLinha("Comando")
         return acao
     }
 
-    public static String lerContinuar(){
+    public String lerContinuar(){
         String acao = lerLinha("Deseja inserir outro time (s/n) ?")
         return acao
     }
-    public static void exibirOpcoes(){
+    public void exibirOpcoes(){
         print("1 - Mostrar Campeao\n2 - Mostrar Lanterna\n3 - Mostrar Tabela\n0 - Encerrar\n")
     }
 
-    public static void mostrarCampeao(String timeCampeao){
+    public void mostrarCampeao(String timeCampeao){
         println(timeCampeao);
     }
 
-    public static void mostrarLanterna(String timeLanterna){
+    public void mostrarLanterna(String timeLanterna){
         println(timeLanterna);
     }
 
-    public static void mostrarTabela(String tabela){
+    public void mostrarTabela(String tabela){
         println(tabela);
     }
 
-    private static String lerLinha(String mensagem){
+    private String lerLinha(String mensagem){
         print("$mensagem: ")
         return scanner.nextLine()
     }

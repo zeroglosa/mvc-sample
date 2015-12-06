@@ -6,17 +6,18 @@ package br.com.zg.trainning.model
 class Campeonato {
     String nomeCampeonato
     List<Time> timesDoCampenato = []
+    Regulamentacao regulamentacao
 
     public Time obterCampeao(){
-        return timesDoCampenato.sort()[-1];
+        return regulamentacao.obterCampeao(timesDoCampenato)
     }
 
     public Time obterLanterna(){
-        return timesDoCampenato.sort()[0];
+        return regulamentacao.obterLanterna(timesDoCampenato)
     }
 
     public ArrayList<Time> obterTabela(){
-        return timesDoCampenato.reverse();
+        return regulamentacao.obterTabela(timesDoCampenato)
     }
 
     public boolean inserirTime(Time time){
