@@ -1,5 +1,6 @@
 package br.com.zg.trainning
 
+import br.com.zg.trainning.controller.CampeonatoController
 import spock.lang.Specification
 
 class CampeonatoAppConsoleSpec extends Specification {
@@ -11,10 +12,12 @@ class CampeonatoAppConsoleSpec extends Specification {
         System.in = input
 
         when:
-        println 'Executar logica do controller inicial'
+
+        CampeonatoController controller = new CampeonatoController()
+        controller.iniciaCampeonato()
 
         then:
-        outputStream.toString().contains 'O campeão é o Corinthians!'
+        outputStream.toString().contains 'Corinthians'
 
         where:
         input = this.class.getResourceAsStream('/inputComCampeao.txt')
@@ -27,10 +30,11 @@ class CampeonatoAppConsoleSpec extends Specification {
         System.in = input
 
         when:
-        println 'Executar logica do controller inicial'
+        CampeonatoController controller = new CampeonatoController()
+        controller.iniciaCampeonato()
 
         then:
-        outputStream.toString().contains 'O lanterna é o Grêmio.'
+        outputStream.toString().contains 'Atlético MG'
 
         where:
         input = this.class.getResourceAsStream('/inputComEmpate.txt')
