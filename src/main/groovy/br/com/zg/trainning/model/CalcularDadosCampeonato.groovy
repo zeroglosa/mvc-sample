@@ -5,60 +5,46 @@ class CalcularDadosCampeonato implements CalcularDados {
 
 
 	Clube retorneCampeao(Campeonato campeonato){
+		List<Clube> clubes = ordenaListaClubes(campeonato)
+		return clubes.first()
 
-		int pontuacaoMaxima = 0;
-		int numeroVitorias = 0
-		Clube campeao
-
-		campeonato.clubesParticipantes.each {clube ->
-			if(clube.pontuacao > pontuacaoMaxima){
-				pontuacaoMaxima = clube.pontuacao
-				numeroVitorias = clube.vitorias
-				campeao = clube
-			}
-			if(clube.pontuacao==pontuacaoMaxima){
-				if(clube.vitorias>numeroVitorias){
-					campeao = clube
-				}
-
-			}
-		}
-		return campeao
 	}
 
 	Clube retorneUltimoColocado(Campeonato campeonato){
-		int pontuacaoMinima = 1000;
-		int numeroVitorias = 1000
-		Clube lanterna
-
-		campeonato.clubesParticipantes.each {clube ->
-			if(clube.pontuacao < pontuacaoMinima){
-				pontuacaoMinima = clube.pontuacao
-				numeroVitorias = clube.vitorias
-				lanterna = clube
-			}
-			if(clube.pontuacao==pontuacaoMinima){
-				if(clube.vitorias<numeroVitorias){
-					lanterna = clube
-				}
-			}
-		}
-		return lanterna
+		List<Clube> clubes = ordenaListaClubes(campeonato)
+		return clubes.last()
 
 	}
 
-	void imprimeTabela(Campeonato campeonato){
-		Collections.sort(campeonato.clubesParticipantes);
-		int contador = 1
-		campeonato.clubesParticipantes.each{clube->
-			println ("${contador} | Clube: ${clube.nome} | Pontuação: ${clube.pontuacao}")
-			contador++;
-		}
+	List<Clube> ordenaListaClubes(Campeonato campeonato){
+		List<Clube> clubes = campeonato.clubesParticipantes
+		Collections.sort(clubes,this)
 
-
-
-
+		clubes.reverse()
 	}
+	int compare(Clube clube1, Clube clube2){
+		int pontuacaoClube1 = calculePontuacao(clube1)
+		int pontuacaoClube2 = calculePontuacao(clube2)
+
+		int compareTimes = pontuacaoClube1 <=> pontuacaoClube2
+
+		if(compareTimes==0){
+			compareTimes = compareEmpate(clube1,clube2)
+		}
+		return compareTimes
+	}
+
+	int calculePontuacao(Clube clube){
+		 return clube.vitorias * 3 + clube.empates
+	}
+
+	int compareEmpate(Clube clube1, Clube clube2){
+		int vitoriasClube1 = clube1.vitorias
+		int vitoriasClube2 = clube2.vitorias
+
+		return vitoriasClube1 <=> vitoriasClube2
+	}
+
 
 
 

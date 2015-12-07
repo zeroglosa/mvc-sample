@@ -1,9 +1,10 @@
 package br.com.zg.trainning.view.apresentacao
 
+import br.com.zg.trainning.controller.CampeonatoController
 import br.com.zg.trainning.model.Clube
-import br.com.zg.trainning.view.campeonato.CampeonatoView
 
-import static br.com.zg.trainning.view.campeonato.CampeonatoView.entrada
+
+import static br.com.zg.trainning.controller.CampeonatoController.entrada
 
 /**
  * Created by Lucas Oliveira on 03/12/2015.
@@ -25,7 +26,7 @@ class ApresentacaoView implements EntradaDadosApresentacao {
 
 Opcao:
 """
-        return entrada.nextLine()
+        entrada.nextLine()
 
     }
     void exibeDadosTime(Clube clube){
@@ -33,8 +34,21 @@ Opcao:
         println "Vitorias:  ${clube.vitorias}"
         println "Saldo Gols:  ${clube.saldo}"
     }
+    void exibeDadosTabela(List<Clube> clubes){
+        int contador = 1
+        clubes.each {clube ->
+            println ("${contador} | Clube: ${clube.nome}")
+            contador++;
+        }
+
+    }
     void aguardaConfirmacao(){
         print("Pressione qualquer tecla para continuar...")
         entrada.nextLine()
+    }
+
+    void exibeOpcaoInvalida(){
+        println "Opcao invalida, digite novamente"
+
     }
 }

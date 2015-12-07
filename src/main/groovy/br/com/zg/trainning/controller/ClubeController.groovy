@@ -40,7 +40,7 @@ class ClubeController {
 			}
 		}
 		else{
-			println "Caracter invalido, digite somente s ou n"
+			cview.retorneCaracterInvalido()
 			cview.verificaFimInclusao()
 		}
 

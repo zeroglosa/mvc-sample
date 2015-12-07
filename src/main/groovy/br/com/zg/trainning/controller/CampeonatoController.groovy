@@ -10,6 +10,8 @@ class CampeonatoController {
 	Campeonato campeonato
 	ClubeController clubeCon = new ClubeController()
 
+	static Scanner entrada = new Scanner(System.in)
+
 	void iniciaCampeonato(){
 		campview.exibeBoasVindas()
 		criaCampeonato()

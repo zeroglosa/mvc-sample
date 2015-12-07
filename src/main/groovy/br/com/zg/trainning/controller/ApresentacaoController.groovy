@@ -25,7 +25,7 @@ class ApresentacaoController {
                 exibeMenu(campeonato)
             break;
             case '3':
-                calcDados.imprimeTabela(campeonato)
+                apreView.exibeDadosTabela(calcDados.ordenaListaClubes(campeonato))
                 apreView.aguardaConfirmacao()
                 exibeMenu(campeonato)
 
@@ -34,7 +34,7 @@ class ApresentacaoController {
                 return
             break;
             default:
-                println "Op��o inv�lida, digite novamente"
+                apreView.exibeOpcaoInvalida()
                 exibeMenu()
             break;
         }

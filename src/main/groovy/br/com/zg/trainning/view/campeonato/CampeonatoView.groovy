@@ -1,14 +1,18 @@
 package br.com.zg.trainning.view.campeonato
 
+import br.com.zg.trainning.controller.CampeonatoController
+import static br.com.zg.trainning.controller.CampeonatoController.entrada
+
+
 class CampeonatoView implements EntradaDadosCampeonato{
 
-	static Scanner entrada = new Scanner(System.in)
+
 
 
 	@Override
 	String solicitaNomeCampeonato() {
 		print "Insira o nome do Campeonato: "
-		return entrada.nextLine()
+		entrada.nextLine()
 
 	}
 
@@ -26,6 +30,5 @@ Critérios de Desempate
 				"""
 	}
 
-	String exibeMenu(){
-	}
+
 }
