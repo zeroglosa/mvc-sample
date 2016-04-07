@@ -10,5 +10,5 @@ class Time {
 	private int quantidadeDerrotas
 	private int quantidadeEmpates
 	private int quantidadeGolsPro
-	private int quantidadeGoldContra
+	private int quantidadeGolsContra
 }
