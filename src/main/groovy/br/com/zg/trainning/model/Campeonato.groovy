@@ -5,8 +5,8 @@ package br.com.zg.trainning.model
  */
 class Campeonato {
 
-	String nome
-	int anoCampeonato
-	int quantidadeRodadas
-	List<Time> timesParticipantes
+	private String nome
+	private int anoCampeonato
+	private int quantidadeRodadas
+	private List<Time> timesParticipantes
 }
