@@ -1,5 +1,4 @@
-package br.com.zg.trainning.model
-
+package br.com.zg.trainning.model.entities
 /**
  * Created by luizhenrique on 07/04/16.
  */
