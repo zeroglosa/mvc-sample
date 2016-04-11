@@ -29,6 +29,13 @@ class CalculadorResultadosPontosCorridos2015 implements CalculadorResultados {
             int saldoTime2 = time2.saldoDeGols
 
             compareTimes = saldoTime1 <=> saldoTime2
+
+            if (compareTimes == 0) {
+                int qntVitoriasTime1 = time1.vitorias
+                int qntVitoriasTime2 = time2.vitorias
+
+                compareTimes = qntVitoriasTime1 <=> qntVitoriasTime2
+            }
         }
 
         return compareTimes
