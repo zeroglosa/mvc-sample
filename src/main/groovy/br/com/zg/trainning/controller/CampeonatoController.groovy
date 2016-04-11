@@ -1,11 +1,11 @@
 package br.com.zg.trainning.controller
 
 import br.com.zg.trainning.model.CalculadorResultados
-import br.com.zg.trainning.model.CalculadorResultadosPontosCorridos
+import br.com.zg.trainning.model.CalculadorResultadosPontosCorridos2015
 import br.com.zg.trainning.model.Campeonato
 import br.com.zg.trainning.model.Time
 import br.com.zg.trainning.view.CampeonatoView
-import br.com.zg.trainning.view.console.CampeonatoConsoleView
+import br.com.zg.trainning.view.joption.CampeonatoJOptionView
 
 class CampeonatoController {
     public static final int SABER_CAMPEAO = 1
@@ -17,10 +17,10 @@ class CampeonatoController {
     private CampeonatoView campeonatoView
     private CalculadorResultados calculadorResultados
 
-    CampeonatoController() {
-        campeonatoView = new CampeonatoConsoleView()
-        timeController = new TimeController()
-        calculadorResultados = new CalculadorResultadosPontosCorridos()
+    CampeonatoController(CampeonatoView campeonatoView, TimeController timeController, CalculadorResultados calculadorResultados) {
+        this.timeController = timeController
+        this.campeonatoView = campeonatoView
+        this.calculadorResultados = calculadorResultados
     }
 
     void inicieCampeonato() {

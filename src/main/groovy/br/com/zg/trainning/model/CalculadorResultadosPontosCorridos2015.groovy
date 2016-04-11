@@ -1,6 +1,6 @@
 package br.com.zg.trainning.model
 
-class CalculadorResultadosPontosCorridos implements CalculadorResultados {
+class CalculadorResultadosPontosCorridos2015 implements CalculadorResultados {
 
     Time obtenhaCampeao(Campeonato campeonato) {
         obtenhaListaOrdenada(campeonato).first()

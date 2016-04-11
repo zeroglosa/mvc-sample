@@ -4,12 +4,13 @@ import br.com.zg.trainning.model.Campeonato
 import br.com.zg.trainning.model.Time
 import br.com.zg.trainning.view.TimeView
 import br.com.zg.trainning.view.console.TimeConsoleView
+import br.com.zg.trainning.view.joption.TimeJOptionView
 
 class TimeController {
     TimeView timeView
 
-    TimeController() {
-        timeView = new TimeConsoleView()
+    TimeController(TimeView timeView) {
+        this.timeView = timeView
     }
 
     void adicioneTimes(Campeonato campeonato) {
